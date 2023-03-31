@@ -1,20 +1,13 @@
-let receta = {
-    nombre: "sandwich",
-    ingredientes: [
-       {nombre: "pan", cantidad: 2, ingrediente: {nombre: "queso", cantidad: 1 } } 
-    ],
-};
+let receta = {};
 
-   let {ingredientes: {nombre:nombrepan},
-    } = receta;
+receta.nombre = "sandwich";
+receta.ingredientes = [];
+receta.ingredientes.push({nombre: "pan", cantidad: 2});
+receta.ingredientes.push({nombre: "queso", cantidad: 1});
+const cantidadPrimerIngrediente = receta.ingredientes[0].cantidad;
+const cantidadSegundoIngrediente = receta.ingredientes[1].cantidad;
 
-    console.log("pan");
-
-    const cantidad = [2,1]
-    let sum = 0;
-    for (let key in cantidad) {
-     sum += cantidad[key];
-     
-    }
-
-   console.log(sum); 
+const primerIngrediente = receta.ingredientes[0].nombre;
+const sumaIngredientes = cantidadPrimerIngrediente + cantidadSegundoIngrediente;
+console.log(primerIngrediente);
+console.log(sumaIngredientes);

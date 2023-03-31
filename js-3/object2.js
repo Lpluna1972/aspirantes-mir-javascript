@@ -1,40 +1,33 @@
-let persona ={
- nombre: "Ludys Luna",
- edad: 51,
- ciudad: "Barranquilla",
- profesion: "Agente comercial", 
-     
+let persona = {
+  nombre: "Ludys Luna",
+  edad: 51,
+  ciudad: "Barranquilla",
+  profesion: "Agente comercial",
+
 }
-   console.log(persona.nombre)
-   
-  function presentacion(nombre,edad,ciudad,profesion) {
+console.log(persona);
 
-    return "soy " + nombre + edad + ciudad + profesion;    
-   }
+function presentacion(objeto) {
+  return "soy " + objeto.nombre + " " + objeto.edad + " " + objeto.ciudad + " " + objeto.profesion;
+}
+console.log(presentacion(persona));
 
-  console.log(presentacion("ludys luna ", "51 ", " barranquilla ", "agente comercial "))
+let mensaje = presentacion(persona);
+console.log(mensaje);
 
-
-
-   let mensaje = presentacion 
-
-    console.log(mensaje("ludys luna ", "51 ", " barranquilla ", " agente comercial"))
-
-    persona.hobbies = ["leer", "pintar", "bailar"]
-
-    console.log(persona.hobbies)
-
-   let keys = Object.keys(persona.hobbies)
-
-   for (let i = 0; i < keys. length; i++) {
-    let key = keys[i];
-     console.log(persona.hobbies[key])
-   }
+persona.hobbies = ["leer", "pintar", "bailar"]
 
 
-    
+let keys = Object.keys(persona.hobbies)
 
-  
+for (let i = 0; i < keys.length; i++) {
+  let key = keys[i];
+  console.log(persona.hobbies[key])
+}
 
 
-     
+
+
+
+
+
